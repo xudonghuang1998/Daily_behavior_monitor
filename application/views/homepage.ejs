@@ -1,0 +1,18 @@
+<h1>HomePage!</h1>
+Mood Today: <%= mood_today %>
+<br>
+<br>Mood Yesterday: <%= mood_yesterday %>
+<br>
+
+<% if (complete === 'True') { %>
+    <br>Things are looking <%= trend %> today!
+<% } else { %>
+    <br>Today or yesterday are not reported so I can't tell your mood trend!
+<% } %>
+
+<br>
+<br><a href="./behavior/reported"> Report new </a>
+<br>
+<br><a href="./behavior/summary"> Summaries </a>
+<br>
+<br><a href="./auth/logout"> logout </a>

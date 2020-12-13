@@ -1,0 +1,21 @@
+<h1>Summary!</h1>
+<% if (errors && errors.length > 0) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+<form method="POST" action="/behavior/summary/week">
+    Week:
+    <br><input type="week" name="week" value=<%= week %> required/>
+    <br><input type="submit" value="Submit!" required/>
+</form>
+
+<form method="POST" action="/behavior/summary/month">
+    Month:
+    <br><input type="month" name="month" value=<%= month %> />
+    <br><input type="submit" value="Submit!" required/>
+</form>
+
+<br><a href="/behavior/trend"> homepage </a>

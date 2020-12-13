@@ -1,0 +1,27 @@
+<h1>Morning Report!</h1>
+<% if (errors && errors.length > 0) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+
+<form method="POST" action="/behavior/reporting/morning">
+    Date:
+    <% if (date_morning) { %>
+        <input type="date" name="date" value=<%= date_morning %> />
+    <% } else { %>
+        <input type="date" name="date" value=<%= today %> />
+    <% } %>
+    <br>
+    <br>Sleep Duration: <input type="number" name="sleepDuration" min="0.00" max="24.00" step="0.01" value=<%= time_sleep %> /> Hours
+    <br>
+    <br>Sleep Quality: <input type="range" name="sleepQuality"  min="1" max="5" step="1" value=<%= quality_sleep %> /> 1~5
+    <br>
+    <br>Generic Mood: <input type="range" name="genericMood" min="1" max="5" step="1" value=<%= mood_morning %> /> 1~5
+    <br>
+    <br><input type="submit" value="Submit!" />
+</form>
+
+<br><a href="/behavior/trend"> homepage </a>

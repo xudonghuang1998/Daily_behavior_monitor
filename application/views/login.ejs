@@ -1,0 +1,19 @@
+<h1>Login!</h1>
+<% if (errors_login && errors_login.length > 0) { %>
+    <ul>
+        <% errors_login.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+
+<form method="POST" action="/auth/login">
+    Input your email:
+    <br><input type="email" name="email" value=<%= email %> >
+    <br>Input your password:
+    <br><input type="password" name="password" />
+    <br><input type="submit" value="Submit!" />
+</form>
+<a href="registration"> registration </a>
+<br>
+<br><a href="logout"> logout </a>

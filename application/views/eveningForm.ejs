@@ -1,0 +1,28 @@
+<h1>Evening Report!</h1>
+<% if (errors && errors.length > 0) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+<form method="POST" action="/behavior/reporting/evening">
+    Date:
+    <% if (date_evening) { %>
+        <input type="date" name="date" value=<%= date_evening %> />
+    <% } else { %>
+        <input type="date" name="date" value=<%= today %> />
+    <% } %>
+    <br>
+    <br>Sports Time: <input type="number" name="sportsTime" min="0.00" max="24.00" step="0.01" value=<%= time_sports %> /> Hours
+    <br>
+    <br>Study Time: <input type="number" name="studyTime" min="0.00" max="24.00" step="0.01" value=<%= time_study %> /> Hours
+    <br>
+    <br>Regularity and quality of eating: <input type="range" name="RQ_eating"  min="1" max="5" step="1" value=<%= RQ_eating %> /> 1~5
+    <br>
+    <br>Generic Mood: <input type="range" name="genericMood"  min="1" max="5" step="1" value=<%= mood_evening %> /> 1~5
+    <br>
+    <br><input type="submit" value="Submit!" />
+</form>
+
+<br><a href="/behavior/trend"> homepage </a>
