@@ -1,4 +1,4 @@
-# Daily-monitor
+# Daily-behavior-monitor
 
 With this application provies you a basic framework (without UI design) wich can keep track of your behavior.
 
@@ -13,12 +13,9 @@ to [Heroku](https://dashboard.heroku.com/), and data is stored to [PostgreSQL](h
 
 ## Configuring Postgres database:
 
-After getting your local PostgreSQL database running (you can check
-[these instructions](/docs/local-postgres-docker-setup.md) if you want to run PostgreSQL with Docker),
-add proper tables by running the commands in [/docs/SETUP.sql](/docs/SETUP.sql).
+Config the database before run the application locally
 
-then create an `.env` file to `/config`, and add these variables
-with proper values to it:
+1.Create required tables for the application in your database:
 
 ```
 CREATE TABLE users (
@@ -42,6 +39,8 @@ CREATE TABLE reports (
   rq_eating integer
   );
 ```
+
+2.Set your database in ./config/config.js, uncomment the configuration.
 
 ## starting the application
 
