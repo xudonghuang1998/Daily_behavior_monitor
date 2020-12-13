@@ -1,17 +1,6 @@
-# my-monitor
+# Daily-monitor
 
-With this application provies you a basic framework (without UI design) wich can keep track of your behavior, including
-the time spent on:
-
-- sleeping
-- stydying
-- exercises
-
-and the quality of:
-
-- sleeping
-- eating
-- mood
+With this application provies you a basic framework (without UI design) wich can keep track of your behavior.
 
 The application is deployed online in: https://huang-879095.herokuapp.com/
 
