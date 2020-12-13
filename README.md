@@ -9,9 +9,9 @@ server side rendering with [EJS](https://ejs.co/) and is styled with [PaperCSS](
 The deployment is automatically with [Github Actions](https://github.com/features/actions)
 to [Heroku](https://dashboard.heroku.com/), and data is stored to [PostgreSQL](https://www.postgresql.org/).
 
-# Running the application locally
+## Running the application locally
 
-## Configuring Postgres database:
+### Configuring Postgres database:
 
 Config the database before run the application locally
 
@@ -42,13 +42,13 @@ CREATE TABLE reports (
 
 2.Set your database in ./config/config.js, uncomment the configuration.
 
-## starting the application
+### starting the application
 
 After the database has been configured with the proper tables,  type in the following command line in terminal where the directory that contains the application:
 
 ``` $ deno run --allow-all --unstable app.js ```
 
-# Requirements
+## Requirements
 
 This project was made for [Aalto University's Web Software Development](https://wsd.cs.aalto.fi/web-software-development/)
 course in 2020.
