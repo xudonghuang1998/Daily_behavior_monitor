@@ -1,6 +1,6 @@
 # Daily-behavior-monitor
 
-With this application provies you a basic framework (without UI design) wich can keep track of your behavior.
+This application provies you a basic framework (without UI design) wich can keep track of your behavior.
 
 The application is deployed online in: https://huang-879095.herokuapp.com/
 
